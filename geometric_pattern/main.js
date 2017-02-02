@@ -1,6 +1,9 @@
 var NUM_CIRCLES = 12;
 var circleDiameter;
 var circleRadius;
+var rVal;
+var gVal;
+var bval;
 
 function setup() {
     createCanvas(480, 600);
@@ -9,6 +12,10 @@ function setup() {
 }
 
 function draw() {
+    rVal = 255;
+    gVal = 0;
+    bVal = 0;
+    
     var isShifted = false;
     
     var y = height;
@@ -29,5 +36,15 @@ function draw() {
       
       y = y - circleDiameter;
       isShifted = !isShifted;
+      
+      rVal = rVal - 2;
+      gVal = gVal + 7;
+      bVal = bVal + 3;
+      
+      fill(color(rVal,gVal,bVal));
+      
+      stroke(color(rVal,gVal,bVal));
       }
     }
+    
+    
