@@ -44,6 +44,13 @@ function draw() {
       fill(color(rVal,gVal,bVal));
       
       stroke(color(rVal,gVal,bVal));
+      
+      function keypressed() {
+          if (keycode === 115) {
+              saveCanvas('geometricpattern', 'png');
+          }
+          return false;
+      }
       }
     }
     
